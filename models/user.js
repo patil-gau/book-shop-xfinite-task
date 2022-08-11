@@ -31,5 +31,9 @@ const userSchema = new mongoose.Schema({
 });
 
 const User =  mongoose.model('User',userSchema);
+
+//create a index for faster querying
+User.createIndexes({email:1});
 module.exports = User;
+
 

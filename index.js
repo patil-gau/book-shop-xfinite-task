@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
 
 //import all routes
 const userRouter = require('./routes/user.js');
@@ -11,6 +12,7 @@ const app = express();
 //add middleware
 app.use(express.json());
 app.use(cors());
+app.use(cookieParser());
 
 app.use("/api",userRouter);
 app.use("/api",booksRouter);

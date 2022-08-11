@@ -60,10 +60,14 @@ exports.register = async (req,res,next)=>{
         fullname:newUser.fullname,
         email : newUser.email,
         phone : newUser.phone,
-        token : token,
+        // token : token,
         
     };
-
+    res.cookie('token',token,{ 
+      'expires': new Date(new Date.now() + 604800),   //expires in 7 days
+      'httpOnly' : true,
+      'secure' : false    //set to true in case of https
+    })
     res.status(201).json(response);
  
    } catch (error) {
