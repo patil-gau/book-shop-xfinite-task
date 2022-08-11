@@ -3,6 +3,7 @@ const cors = require('cors');
 
 //import all routes
 const userRouter = require('./routes/user.js');
+const booksRouter = require('./routes/book.js');
 
 //create app
 const app = express();
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/api",userRouter);
+app.use("/api",booksRouter);
 
 //default home route
 app.get("/",(req,res)=>{
