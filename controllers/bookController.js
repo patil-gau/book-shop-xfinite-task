@@ -1,12 +1,13 @@
 const Book = require('../models/book.js');
 const redisClient = require('../config/redisClient');
 
-//make connection with redis client
+//connect to register store
 (async function (){ await redisClient.connect()})();
 
 exports.getBooks = async(req,res,next)=>{
    const BOOKS_LIMIT = 10;
    const defaultOffset = 0;
+
    const response = {
         status :0,
         msg : "",
@@ -47,7 +48,7 @@ exports.getBooks = async(req,res,next)=>{
         }
         else
          {
-            console.log(`[INFO] Data not cached`);
+            console.log(`[INFO] Data not cached makes DB Query`);
          }      
 
         //get the data from database

@@ -24,7 +24,7 @@ const authMiddleWare = async(req,res,next)=>{
         response.msg = "Invalid token provided";
         return res.status(401).json(response);
     }
-
+    // pass the request forward
     next();
 }
 

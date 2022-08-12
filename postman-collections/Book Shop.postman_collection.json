@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "022c6b2b-d435-4f16-9d92-0622808728b1",
+		"name": "Book Shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22369160"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"patilgautam728@gmail.com\",\n    \"phone\" : \"9535836222\",\n    \"fullname\" : \"Gautam Patil\",\n    \"password\" : \"secret\"\n}"
+				},
+				"url": {
+					"raw": "http://{{DOMAIN}}:{{PORT}}/api/register",
+					"protocol": "http",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"patilgautam728@gmail.com\",\n    \"phone\" : \"9535836222\",\n    \"fullname\" : \"Gautam Patil\",\n    \"password\" : \"secret\"\n}"
+						},
+						"url": {
+							"raw": "http://{{DOMAIN}}:{{PORT}}/api/register",
+							"protocol": "http",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "371"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"173-s0WKjJNzRqIyJFlAPek7yOp5Qho\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 Aug 2022 18:57:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"msg\": \"User created successfully\",\n    \"data\": {\n        \"fullname\": \"Gautam Patil\",\n        \"email\": \"patilgautam728@gmail.com\",\n        \"phone\": \"9535836222\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmYzZmY4MWM3OGRlNmIwNTViYTk2MGMiLCJlbWFpbCI6InBhdGlsZ2F1dGFtNzI4QGdtYWlsLmNvbSIsImlhdCI6MTY2MDE1NzgyNSwiZXhwIjoxNjYwNzYyNjI1fQ.XjRlMv8cMjSWroWuWfCyGwfxwmkcJZmjYDZCZ_wQTBc\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Books",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmY0YmI5MjgyMWQ1ZWRlMGY5YzNiZDIiLCJlbWFpbCI6InBhdGlsZ2F1dGFtQGdtYWlsLmNvbSIsImlhdCI6MTY2MDIwNTk3MCwiZXhwIjoxNjYwODEwNzcwfQ.Idj7cfqDKPX_nUsLJOsRQbOXvgXPGiPiT2hxWO7nioE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{DOMAIN}}:{{PORT}}/api/books/?limit=3&offset=2",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"books",
+						""
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "offset",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Books API LIMIT TEST",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmY0YmI5MjgyMWQ1ZWRlMGY5YzNiZDIiLCJlbWFpbCI6InBhdGlsZ2F1dGFtQGdtYWlsLmNvbSIsImlhdCI6MTY2MDIwNTk3MCwiZXhwIjoxNjYwODEwNzcwfQ.Idj7cfqDKPX_nUsLJOsRQbOXvgXPGiPiT2hxWO7nioE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{DOMAIN}}:{{PORT}}/api/books/?limit=3&offset=0",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"books",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "Too Many Requests",
+					"code": 429,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "5"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 12 Aug 2022 06:20:48 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1660382654"
+						},
+						{
+							"key": "Retry-After",
+							"value": "60"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34-0TaNBFPdOarC3rWIBU6BdNH3D7w\""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "To many requests reached. Please try after some time"
+				},
+				{
+					"name": "Get Books without passing offset and limit",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmY0YmI5MjgyMWQ1ZWRlMGY5YzNiZDIiLCJlbWFpbCI6InBhdGlsZ2F1dGFtQGdtYWlsLmNvbSIsImlhdCI6MTY2MDIwNTk3MCwiZXhwIjoxNjYwODEwNzcwfQ.Idj7cfqDKPX_nUsLJOsRQbOXvgXPGiPiT2hxWO7nioE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{DOMAIN}}:{{PORT}}/api/books/",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"books",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "5"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "4"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 12 Aug 2022 06:23:28 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1660383434"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "528"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"210-Jk8IBtPlLvTau/vclk/Ban04uqc\""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"msg\": \"\",\n    \"data\": [\n        {\n            \"_id\": \"62f4bcd4fc1614d020b88e09\",\n            \"title\": \"High on Happiness\",\n            \"author\": \"vasudha kapoor\",\n            \"category\": \"non-fiction\",\n            \"ratings\": [\n                3,\n                4\n            ],\n            \"comments\": [\n                \"Amazing Book\"\n            ]\n        },\n        {\n            \"_id\": \"62f4bfb7644696592ce3dc6d\",\n            \"title\": \"do epic shit\",\n            \"author\": \"Ankur\",\n            \"category\": \"non-fiction\",\n            \"ratings\": [\n                5\n            ],\n            \"comments\": [\n                \"amazing read\",\n                \"one of my favorites \"\n            ]\n        },\n        {\n            \"_id\": \"62f4bfbc644696592ce3dc6e\",\n            \"title\": \"100 inspiring stories\",\n            \"author\": \"Vanita\",\n            \"category\": \"non-fiction\",\n            \"ratings\": [\n                5\n            ],\n            \"comments\": [\n                \"amazing read\",\n                \"one of my favorites \"\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "Get Books with Offset and Limit",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmY0YmI5MjgyMWQ1ZWRlMGY5YzNiZDIiLCJlbWFpbCI6InBhdGlsZ2F1dGFtQGdtYWlsLmNvbSIsImlhdCI6MTY2MDIwNTk3MCwiZXhwIjoxNjYwODEwNzcwfQ.Idj7cfqDKPX_nUsLJOsRQbOXvgXPGiPiT2hxWO7nioE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{DOMAIN}}:{{PORT}}/api/books/?limit=3&offset=2",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"api",
+								"books",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "offset",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "5"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "1"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 12 Aug 2022 06:24:42 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1660383694"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "205"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cd-FEbc3bTJMFfjLPjeD88h4qZWbr0\""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"msg\": \"\",\n    \"data\": [\n        {\n            \"_id\": \"62f4bfbc644696592ce3dc6e\",\n            \"title\": \"100 inspiring stories\",\n            \"author\": \"Vanita\",\n            \"category\": \"non-fiction\",\n            \"ratings\": [\n                5\n            ],\n            \"comments\": [\n                \"amazing read\",\n                \"one of my favorites \"\n            ]\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

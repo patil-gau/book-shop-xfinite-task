@@ -7,7 +7,6 @@ const connectWithDatabase = async()=>{
             useNewUrlParser : true,
             useUnifiedTopology : true
         }
-
     ).then((res)=>{
         console.log("[INFO] Database connection established.");  
     }).catch((err)=>{
